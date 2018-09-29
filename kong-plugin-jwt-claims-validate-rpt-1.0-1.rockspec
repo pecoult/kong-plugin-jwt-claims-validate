@@ -1,12 +1,12 @@
-package = "kong-plugin-jwt-claims-validate"
+package = "kong-plugin-jwt-claims-validate-rpt"
 version = "1.0-1"
 source = {
-   url = "git+https://github.com/wshirey/kong-plugin-jwt-claims-validate.git",
+   url = "git+https://github.com/pecoult/kong-plugin-jwt-claims-validate.git",
    tag = "v1.0"
 }
 description = {
    summary = "A Kong plugin to check JWT claim values",
-   homepage = "https://github.com/wshirey/kong-plugin-jwt-claims-validate",
+   homepage = "https://github.com/pecoult/kong-plugin-jwt-claims-validate",
    license = "MIT"
 }
 dependencies = {

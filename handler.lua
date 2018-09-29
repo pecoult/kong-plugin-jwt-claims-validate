@@ -56,7 +56,10 @@ function JwtClaimsValidateHandler:access(conf)
   end
 
   local claims = jwt.claims
-  for claim_key,claim_value in pairs(conf.claims) do
+  for confClaim in pairs(conf.claims) do
+    local claim_kv = split(confClaim, ":")
+    local claim_key = claim_kv[0]
+    local claim_value = claim_kv
     if claims[claim_key] == nil or claims[claim_key] ~= claim_value then
       return responses.send_HTTP_UNAUTHORIZED("JSON Web Token has invalid claim value for '"..claim_key.."'")
     end
